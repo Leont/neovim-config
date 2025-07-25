@@ -27,4 +27,20 @@ return {
       },
     },
   },
+
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, conf)
+      conf.mapping["<C-y>"] = conf.mapping["<CR>"]
+      conf.mapping["<CR>"] = nil
+
+      conf.mapping["<C-Down>"] = conf.mapping["<Tab>"]
+      conf.mapping["<Tab>"] = nil
+
+      conf.mapping["<C-Up>"] = conf.mapping["<S-Tab>"]
+      conf.mapping["<S-Tab>"] = nil
+
+      return conf
+    end,
+  },
 }
