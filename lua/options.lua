@@ -11,3 +11,12 @@ o.softtabstop = 4
 o.ignorecase = false
 o.number = false
 o.whichwrap = '[]hl,b,s'
+
+local api = vim.api
+
+api.nvim_create_autocmd('BufRead', {
+	pattern = "Changes",
+	callback = function()
+		o.expandtab = true
+	end,
+})
